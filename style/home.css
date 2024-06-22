@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --font: "Poppins", sans-serif;
+    --balck: #222831;
+    --black-l: #31363F;
+    --blue: #76ABAE;
+    --white: #EEEEEE;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font);
+    font-weight: 400;
+    background-color: #000000;
+}
+
+#navigation{
+    position: relative;
+    float: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    width: 400px;
+    height: 80px;
+}
+
+.navigation a {
+    font-size: 13px;
+    color: white;
+    letter-spacing: .3px;
+    padding: 10px 60px;
+    margin: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 1;
+    transition: .2s;
+}
+
+.navigation a:hover {
+    color: black;
+    background-color: white;
+    opacity: 1;
+    transition: .2s;
+}
+.main {
+    position: relative;
+    top: 80px;
+    max-width: 100%;
+    height: 600px;
+    border-radius: 20px;
+}
+
+.heading {
+    position: relative;
+    width: 600px;
+    height: auto;
+    left: 60px;
+    top: 100px;
+    overflow: hidden;
+}
+
+.heading h1 {
+    font-size: 100px;
+    color: white;
+    opacity: .9;
+}
+
+.heading p {
+    color: white
+}
+
+.image-main {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: 65%;
+    top: 60px;
+    border-radius: 20px;
+    border: 1px solid white;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.image-main img:nth-child(1) {
+    position: absolute;
+    top: 25%;
+    left: 55%;
+    transform: translate(-50%, 10%);
+    width: 500px;
+    height: 350px;
+    border-radius: 13% 87% 49% 51% / 59% 77% 23% 41%;
+    animation-name: morph;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    opacity: 1;
+}
+
+@keyframes morph {
+    0% {
+              border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
+      } 
+      
+      50% {
+              border-radius:  30% 60% 70% 40% / 50% 60% 30% 60%;
+      }
+    
+      100% {
+          border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
+      } 
+  }
+
+.image-main img:nth-child(2) {
+    position: absolute;
+    left: -35%;
+    width: 500px;
+    height: 350px;
+    animation-name: morph-1;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+}
+
+@keyframes morph-1 {
+    0% {
+            border-radius: 38% 62% 49% 51% / 64% 73% 27% 36%;
+      } 
+      
+      50% {
+        border-radius: 70% 30% 83% 17% / 29% 36% 64% 71%; 
+      }
+    
+      100% {
+        border-radius: 38% 62% 49% 51% / 64% 73% 27% 36%;
+      } 
+  }
+
+.arrow {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: none;
+    top: 250px;
+    left: 47%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow span {
+    font-size: 60px;
+    color: white;
+    opacity: .8;
+}
+
+@media screen and (max-width: 800px) {
+    #navigation {
+        width: 400px;
+    }
+
+    .navigation a {
+        padding: 10px 20px;
+    }
+
+    .heading {
+        left: 5px;
+        top: -20px;
+        width: 450px;
+    }
+
+    .heading h1{
+        top: -20px;
+    }
+
+    .heading p {
+        top: -100px;
+    }
+
+    .image-main {
+        width: 150px;
+        height: 400px;
+    }
+
+    .image-main img:nth-child(1) {
+        width: 300px;
+        height: 200px;
+        left: 10%;
+        top: -20%;
+    }
+
+    .image-main img:nth-child(2) {
+        width: 300px;
+        height: 200px;
+        top: 20%;
+        left: -130%;
+    }
+}

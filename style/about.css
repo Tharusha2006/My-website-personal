@@ -1,0 +1,153 @@
+.about-body {
+    width: 100%;
+    height: 650px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.about-heading {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    left: 30px;
+    top: 10px;
+    background-color: #4d4855;
+    background-image: linear-gradient(147deg, #4d4855 0%, #000000 74%);
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+}
+
+.about-heading h1 {
+    font-size: 65px;
+}
+
+.about-heading span {
+    color: white;
+    font-size: 65px;
+}
+
+.skill-box-right {
+    position: relative;
+    left: 35px;
+    top: 40px;
+    width: 95%;
+    height: 200px;
+    border: 1.5px solid black;
+    border-radius: 6px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.skill-box-left {
+    position: relative;
+    left: 35px;
+    top: 50px;
+    width: 95%;
+    height: 200px;
+    border: 1.5px solid black;
+    border-radius: 6px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.text {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 5px solid black;
+}
+
+.text p {
+    font-size: 30px;
+    letter-spacing: .2px;
+}
+
+.discription {
+    position: absolute;
+    width: 800px;
+    height: 150px;
+    border-right: 5px solid black;
+    top: 20px;
+    left: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress {
+    position: absolute;
+    top: 80px;
+    width: 200px;
+    height: 30px;
+    left: 1140px;
+    border-radius: 20px;
+    background-color: #50d8d7;
+    background-image: linear-gradient(316deg, #50d8d7 0%, #923993 74%);
+    animation: load 10s normal infinite;
+}
+
+@keyframes load {
+    0% { width: 0; }
+    20% { width: 200px; }
+    40%{ width: 200px;}
+    60%{ width: 200px;}
+    80%{ width: 200px;}
+    100%{ width: 0;}
+  }
+
+  .progress label {
+    position: relative;
+    top: 4px;
+    left: 10px;
+    color: white;
+  }
+
+  @media screen and (max-width: 1000px) {
+    .about-body {
+        height: 750px;
+    }
+    .skill-box-right {
+        width: 400px;
+        height: 250px;
+    }
+
+    .skill-box-left{
+        width: 400px;
+        height: 250px;
+    }
+
+    .text {
+        width: 60px;
+        height: 60px;
+    }
+
+    .text p {
+        font-size: 15px;
+    }
+
+    .discription {
+        left: 90px;
+        top: 60px;
+        width: 300px;
+        height: 70px;
+        border-right: none;
+    }
+
+    .discription p {
+        font-size: 12px;
+    }
+
+    .progress {
+        left: 90px;
+        height: 20px;
+        top: 200px;
+    }
+
+    .progress label {
+        top: -3px;
+        font-size: 13px;
+    }
+  }
